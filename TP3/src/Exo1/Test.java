@@ -15,11 +15,11 @@ public class Test {
 		Stream<String> streamOfString = Stream.of("Vive","les","informaticiens");
 		System.out.println(Arrays.toString(streamOfString.toArray()));
 		// Question 2
-		Stream.Builder<String> builder = Stream.builder();
-		Stream<String> streamOfString2 = builder.add("Vive").add("les").add("informaticiens").build();
+		Stream<String> streamOfString2 = Stream.<String>builder().add("Vive").add("les").add("informaticiens").build();
 		System.out.println(Arrays.toString(streamOfString2.toArray()));
 		// Question 3
 		Stream<String> streamOfString3 = new ArrayList<String>(Arrays.asList("Vive","les","informaticiens")).stream();
+		Stream<String> streamOfString33 = Stream.of("Vive","les","informaticiens");
 		System.out.println(Arrays.toString(streamOfString3.toArray()));
 		// Question 4
 		Stream<Integer> streamOfInteger = Arrays.stream(new Integer[]{ 10, 20, 15, 22, 35 });
